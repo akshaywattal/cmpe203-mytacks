@@ -15,7 +15,7 @@
             <li><a href="#portfolio">Contact</a>
             </li>
             <li ng-show="currentUser" ng-class="{active: isActive('/logout')}"><a href="" ng-click="logout()">Logout</a></li>
-            </li>
+            <li ng-show="currentUser"><a>{{ currentUser.name }}</a></li>
         </ul>
     </div>
     <!-- /Side Menu -->

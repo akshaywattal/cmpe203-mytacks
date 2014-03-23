@@ -15,7 +15,8 @@ angular.module('mytacksApp')
         })
         .then( function() {
           // Logged in, redirect to home
-          $location.path('/');
+          $location.path('/home');
+          // $location.path('/login');
         })
         .catch( function(err) {
           err = err.data;

@@ -25,6 +25,11 @@ angular.module('mytacksApp', [
         controller: 'SettingsCtrl',
         authenticate: true
       })
+      .when('/home', {
+          templateUrl: 'partials/home',
+          controller: 'HomeCtrl'
+          //authenticate:true
+      })
       .otherwise({
         redirectTo: '/'
       });
