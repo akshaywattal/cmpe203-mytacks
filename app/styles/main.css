@@ -66,8 +66,8 @@ body {
 /*Change the width of the dropdown menu*/
 
 .navbar-nav > li > .dropdown-menu { 
-    width: 350px;
-    background-color: transparent;
+    width: 400px;
+    background-color: ghostwhite;
     padding: 10px;
 }
 /* Responsive: Portrait tablets and up */

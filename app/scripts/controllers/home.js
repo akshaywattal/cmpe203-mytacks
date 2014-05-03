@@ -11,11 +11,11 @@ angular.module('mytacksApp')
  //    });
 	$scope.formData = {};
 	$scope.addTack = function(){
-
-		debugger;
-
+		
 		$http.post('/api/addtack', $scope.formData)
 		.success(function(){ 
+
+			alert("Added Tack");
 			//$scope.posts = $http.get('/api/posts').success(function(data){$scope.posts = data;});
 		});
 		// $scope.posts.push($scope.post);
