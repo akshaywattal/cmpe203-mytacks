@@ -26,8 +26,8 @@ angular.module('mytacksApp', [
         authenticate: true
       })
       .when('/home', {
-          templateUrl: 'partials/home',
-          controller: 'HomeCtrl'
+          templateUrl: 'partials/feed',
+          controller: 'FeedCtrl'
           //authenticate:true
       })
       .otherwise({

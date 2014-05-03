@@ -1,0 +1,19 @@
+<div ng-include src="'/views/partials/navbar.html'"></div>
+<div ng-include="'partials/home'" ></div>
+<div ng-controller="FeedCtrl">
+
+<div class="container">
+	<div id="wrapper">
+		<div id="columns">
+			<div ng-repeat="tack in feed">
+				<div class="pin">
+					<a href="{{ tack.link }}"><h3>{{ tack.title }}</h3></a>
+					<img src="{{ tack.imageURL || 'http://www.designofsignage.com/application/symbol/building/image/600x600/no-photo.jpg' }}" />
+					<p>
+						{{ tack.desc}}
+					</p>
+				</div>
+			</div>
+	 	</div>
+	</div>
+</div>	
