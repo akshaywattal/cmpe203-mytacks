@@ -35,6 +35,11 @@ angular.module('mytacksApp', [
           controller: 'HomeCtrl'
           //authenticate:true
         })
+      .when('/dashboard/boardTacks', {
+          templateUrl: 'partials/tacks',
+          controller: 'FeedCtrl'
+          //authenticate:true
+        })
       .otherwise({
           redirectTo: '/'
         });

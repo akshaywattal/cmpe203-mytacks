@@ -10,10 +10,10 @@ angular.module('mytacksApp')
  //      $scope.user = user.name;
  //      console.dir(user);
  //    });
-
+<<<<<<< HEAD
 	
 	$scope.boards = ['myboard', 'yourboard', 'imbored'];	
-
+=======
 	$scope.setMaster = function(boards) {
     $scope.selected = boards;
 	};
@@ -22,7 +22,7 @@ angular.module('mytacksApp')
     return $scope.selected === boards;
 	};	
 
-
+>>>>>>> ccead01fd6fe9d143273855062b849bfa432b98f
 	$scope.formData = {};
 	$scope.addTack = function(){
 		
