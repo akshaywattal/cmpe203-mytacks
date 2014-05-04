@@ -9,6 +9,14 @@ angular.module('mytacksApp')
  //      $scope.user = user.name;
  //      console.dir(user);
  //    });
+	$scope.setMaster = function(boards) {
+    $scope.selected = boards;
+	};
+
+	$scope.isSelected = function(boards) {
+    return $scope.selected === boards;
+	};	
+
 	$scope.formData = {};
 	$scope.addTack = function(){
 		
