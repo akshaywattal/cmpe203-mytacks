@@ -53,7 +53,11 @@
 										
 										<input type="text" class="form-control" ng-model="formData.desc" placeholder="Description">
 										
-										<input type="text" class="form-control" ng-model="formData.board" placeholder="Which Board?">
+										<!-- <input type="text" class="form-control" ng-model="formData.board1" placeholder="{{ user.boards_created }}"> -->
+										<select class="form-control" ng-model="formData.board" ng-options="board for board in user.boards_created">
+											
+										</select>
+
 										<button type="submit" class="btn btn-primary">Add</button>
 										
 									</form>
