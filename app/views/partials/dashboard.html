@@ -64,5 +64,66 @@
 				</ul>
 			</div><!-- /.navbar-collapse -->
 		</div><!-- /.container-fluid -->
+
+		<div class="navbar-default navbar-static-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="/dashboard"><i class="fa fa-dashboard fa-fw"></i> Boards</a>
+                        </li>
+                        <li>
+                            <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Update Profile</a>
+                        </li>
+                    </ul>
+                    <!-- /#side-menu -->
+                </div>
+                <!-- /.sidebar-collapse -->
+        </div>
+            <!-- /.navbar-static-side -->
 	</nav>
+
+	<div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">My Boards</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+            <!--Issue here, trying to Fix-->
+            <div class="row">
+				<div ng-repeat="boards in currentUser.boards_created ">
+            		<div class="col-md-6 portfolio-item">
+                		<a href="{{ boards }}">
+                    		<img class="img-responsive" src="http://placehold.it/700x400">
+                		</a>
+                		<h3><a href="#project-link" ng-model="boards">{{ boards }}</a>
+                		</h3>
+            		</div>
+				</div>
+			</div>
+
+			<div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Followed Boards</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+            <!--Issue here, trying to Fix-->
+            <div class="row">
+				<div ng-repeat="fboards in currentUser.boards_follows ">
+            		<div class="col-md-6 portfolio-item">
+                		<a href="{{ fboards }}">
+                    		<img class="img-responsive" src="http://placehold.it/700x400">
+                		</a>
+                		<h3><a href="#project-link" ng-model="boards">{{ fboards }}</a>
+                		</h3>
+            		</div>
+				</div>
+			</div>
+    </div>
+    <!-- /#page-wrapper -->
 </div>

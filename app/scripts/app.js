@@ -29,10 +29,15 @@ angular.module('mytacksApp', [
           templateUrl: 'partials/feed',
           controller: 'FeedCtrl'
           //authenticate:true
-      })
+        })
+      .when('/dashboard', {
+          templateUrl: 'partials/dashboard',
+          controller: 'HomeCtrl'
+          //authenticate:true
+        })
       .otherwise({
-        redirectTo: '/'
-      });
+          redirectTo: '/'
+        });
       
     $locationProvider.html5Mode(true);
       
