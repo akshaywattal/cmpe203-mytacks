@@ -12,7 +12,7 @@ angular.module('mytacksApp')
  //    });
 
 	
-	$scope.boards = ['myboard', 'yourboard', 'imbored'];	
+	
 
 	$scope.setMaster = function(boards) {
     $scope.selected = boards;
@@ -34,5 +34,12 @@ angular.module('mytacksApp')
 		});
 		// $scope.posts.push($scope.post);
 		// $scope.post = {url : "http://", title: ""};
+	};
+
+	$scope.deleteTack = function(link){
+        debugger; 
+		$http.delete('/api/deletetack/'+ $scope.tack.link).success(function(){
+			alert('Tack Deleted');
+		});
 	};
 });
