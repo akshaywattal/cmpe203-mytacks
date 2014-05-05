@@ -1,19 +1,14 @@
+// Name: home.js 
+// Description: This is main javascript for consisiting of HomeCtrl
+// API: /api/addtack, /api/addboard, /api/addboard, /api/removeboard, /api/deletetack, /api/updatetack
 'use strict';
 
 angular.module('mytacksApp')
 .controller('HomeCtrl', function($scope, User, $http, Session, $location, $rootScope){
 
 	$scope.user = $rootScope.currentUser;
-	//$scope.user = currentUser.name || '';
 
-	// $http.get('/api/users/me').success(function(user) {
- //      $scope.user = user.name;
- //      console.dir(user);
- //    });
-
-	
-	
-
+	// Scope user 
 	$scope.setMaster = function(boards) {
     $scope.selected = boards;
 	};
@@ -22,19 +17,17 @@ angular.module('mytacksApp')
     return $scope.selected === boards;
 	};
 
-
+	// Adding a Tack
 	$scope.formData = {};
 	$scope.addTack = function(){
 		
 		$http.post('/api/addtack', $scope.formData)
 		.success(function(){
 			alert("Added Tack");
-			//$scope.posts = $http.get('/api/posts').success(function(data){$scope.posts = data;});
 		});
-		// $scope.posts.push($scope.post);
-		// $scope.post = {url : "http://", title: ""};
 	};
 
+	// Adding a Board
 	$scope.addBoard = function(){
 		$http.post('/api/addboard', $scope.formData)
 		.success(function(){ 
@@ -44,6 +37,7 @@ angular.module('mytacksApp')
 		});
 	};
 
+	// Removing a Board
 	$scope.removeBoard = function(){
 		$http.post('/api/removeboard', $scope.formData)
 		.success(function(){ 
