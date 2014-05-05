@@ -23,7 +23,7 @@ angular.module('mytacksApp', [
       .when('/settings', {
         templateUrl: 'partials/settings',
         controller: 'SettingsCtrl',
-        authenticate: true
+        //authenticate: true
       })
       .when('/home', {
           templateUrl: 'partials/feed',
