@@ -111,10 +111,11 @@
 
             <div class="row center-block">
 				<div ng-repeat="boards in currentUser.boards_created ">
-            		<div class="col-md-4 portfolio-item">
-                		<a href="{{ boards }}">
+            		<div class="col-md-3 portfolio-item" style="background:#fff; margin-left:4em; height:70px">
+                		<!--<a href="/dashboard/boardTacks">
                     		<img class="img-responsive" src="http://placehold.it/700x400">
-                		</a>
+                		</a>-->
+
                 		<h3><a href="/dashboard/boardTacks" ng-model="boards"><center>{{ boards }}</center></a>
                 		</h3>
             		</div>
@@ -133,11 +134,11 @@
 
             <div class="row">
 				<div ng-repeat="fboards in currentUser.boards_follows ">
-            		<div class="col-md-4 portfolio-item">
-                		<a href="{{ fboards }}">
+            		<div class="col-md-3 portfolio-item" style="background:#fff; margin-left:4em; height:70px">
+                		<!--<a href="{{ fboards }}">
                     		<img class="img-responsive" src="http://placehold.it/700x400">
-                		</a>
-                		<h3><a href="#project-link" ng-model="boards"><center>{{ fboards }}</center></a>
+                		</a>-->
+                		<h3><a href="/dashboard/boardTacks" ng-model="boards"><center>{{ fboards }}</center></a>
                 		</h3>
             		</div>
 				</div>
