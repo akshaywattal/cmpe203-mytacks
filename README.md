@@ -1,6 +1,7 @@
 MyTacks Project
 ===============
 
+This webapp will let the users tack images or other resources on the web to one of the several boards. The users can tack to any of the boards using the URL of the resource.
 
 # Installation Instructions
 
@@ -25,10 +26,14 @@ Once you are done with installing pre-requisites, first do:
 
 1. Start mongodb.
 
+```
     $ bin/mongod
+```
 
 2. Start the server at port 3000.
 
+```
     $ node server.js
+```
 
 3. Navigate to [here](http://localhost:3000) in your browser. Enjoy!
