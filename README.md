@@ -24,16 +24,16 @@ We recomment installing Bower which is a good web package manager and yeoman whi
 ## Quick Start
 Once you are done with installing pre-requisites, first do:
 
-1. Start mongodb.
+* Start mongodb.
 
 ```
     $ bin/mongod
 ```
 
-2. Start the server at port 3000.
+* Start the server at port 3000.
 
 ```
     $ node server.js
 ```
 
-3. Navigate to [here](http://localhost:3000) in your browser. Enjoy!
+* Navigate to [here](http://localhost:3000) in your browser. Enjoy!
