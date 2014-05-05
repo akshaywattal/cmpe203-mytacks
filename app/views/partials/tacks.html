@@ -86,10 +86,24 @@
 	</nav>
 
 
-	<div id="page-wrapper">
+	<div id="page-wrapper" style="background:#DBDBD2">
             <div class="row">
+            	<div class="dropdown pull-right">
+					<a href="/dashboard/boardTacks" style="display:block; padding:1em; background:#DBDBD2; text-align:right;" data-reveal-id="registerModal" data-toggle="dropdown">Delete Board
+					<span class="glyphicon glyphicon-remove"></span></a>
+					<ul class="dropdown-menu">
+							<div class="form-group">
+									<form class="form-horizontal" ng-submit="removeBoard()">
+										<input type="text" class="form-control center-block" ng-model="formData.board" placeholder="{{ selected }}">
+										<h1></h1>
+										<button type="submit" class="btn btn-primary center-block">Confirm</button>	
+									</form>
+							</div>
+					</ul>
+				</div>
+
                 <div class="col-lg-12">
-                    <h1 class="page-header">{{ selected }}</h1>
+                    <h1 class="page-header"><center>{{ selected }}</center></h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
