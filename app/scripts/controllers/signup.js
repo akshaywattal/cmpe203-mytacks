@@ -1,3 +1,5 @@
+// Name: signup.js 
+// Description: This is used for sign-up
 'use strict';
 
 angular.module('mytacksApp')

@@ -1,3 +1,5 @@
+// Name: login.js 
+// Description: This is used for login functionality
 'use strict';
 
 angular.module('mytacksApp')

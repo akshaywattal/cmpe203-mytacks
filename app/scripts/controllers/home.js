@@ -46,7 +46,7 @@ angular.module('mytacksApp')
 		});
 	};
 
-
+	// Removing a Tack
 	$scope.deleteTack = function(){
 		$http.post('/api/deletetack', $scope.formData)
 		.success(function(){ 
@@ -55,6 +55,7 @@ angular.module('mytacksApp')
 		});
 	};
 
+	// Updating a Tack
 	$scope.updateTack = function(){
 		$http.post('/api/updatetack', $scope.formData)
 		.success(function(){ 
