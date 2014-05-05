@@ -53,10 +53,26 @@ angular.module('mytacksApp')
 	};
 
 
-	$scope.deleteTack = function(link){
+	$scope.deleteTack = function(){
+		$http.post('/api/deletetack', $scope.formData)
+		.success(function(){ 
+			alert("Removed Tack");
+			window.location.href = "/dashboard"
+		});
+	};
+
+	$scope.updateTack = function(){
+		$http.post('/api/updatetack', $scope.formData)
+		.success(function(){ 
+			alert("Updated Tack");
+			window.location.href = "/dashboard"
+		});
+	};
+
+	/*$scope.deleteTack = function(link){
         debugger; 
 		$http.delete('/api/deletetack/'+ $scope.tack.link).success(function(){
 			alert('Tack Deleted');
 		});
-	};
+	};*/
 });
