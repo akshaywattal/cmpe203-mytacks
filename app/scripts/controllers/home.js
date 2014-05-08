@@ -10,9 +10,9 @@ angular.module('mytacksApp')
  //      $scope.user = user.name;
  //      console.dir(user);
  //    });
-
 	
 	
+	var show = true;
 
 	$scope.setMaster = function(boards) {
     $scope.selected = boards;
@@ -22,13 +22,14 @@ angular.module('mytacksApp')
     return $scope.selected === boards;
 	};
 
-
+	//$scope.link = '';	
 	$scope.formData = {};
 	$scope.addTack = function(){
 		
 		$http.post('/api/addtack', $scope.formData)
 		.success(function(){
 			alert("Added Tack");
+			show = false;
 			//$scope.posts = $http.get('/api/posts').success(function(data){$scope.posts = data;});
 		});
 		// $scope.posts.push($scope.post);
@@ -40,7 +41,7 @@ angular.module('mytacksApp')
 		.success(function(){ 
 
 			alert("Added Board");
-			window.location.href = "/dashboard"
+			window.location.href = "/dashboard";
 		});
 	};
 
@@ -48,15 +49,27 @@ angular.module('mytacksApp')
 		$http.post('/api/removeboard', $scope.formData)
 		.success(function(){ 
 			alert("Removed Board");
-			window.location.href = "/dashboard"
+			window.location.href = "/dashboard";
 		});
 	};
 
 
-	$scope.deleteTack = function(link){
+	$scope.deleteTack = function(tack, selected){
         debugger; 
-		$http.delete('/api/deletetack/'+ $scope.tack.link).success(function(){
+        //alert(link);
+        $scope.formData.tack = tack;
+        $scope.formData.board = $scope.selected;
+		$http.post('/api/deletetack/', $scope.formData).success(function(){
 			alert('Tack Deleted');
 		});
 	};
+
+	// Modal
+	
+		
+
+// Please note that $modalInstance represents a modal window (instance) dependency.
+// It is not the same as the $modal service used above.
+
+
 });

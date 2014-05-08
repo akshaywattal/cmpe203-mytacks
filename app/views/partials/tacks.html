@@ -117,13 +117,15 @@
 					<div id="columns">
 						<div ng-repeat="tack in feed">
 							<div class="pin" ng-if="selected == tack.boards">
-								<a href="{{ tack.link }}"><h3>{{ tack.title }}</h3></a>
+								<a ng-model="link" href="{{ tack.link }}"><h3>{{ tack.title }}</h3></a>
 								<img src="{{ tack.imageURL || 'http://www.designofsignage.com/application/symbol/building/image/600x600/no-photo.jpg' }}" />
 								<p>
 									{{ tack.desc }}
 								</p>
 								<br>
-								<p><button ng-click="deleteTack(tack.link)" class="btn btn-danger">Delete</button></p>
+								<p><button ng-click="deleteTack(tack, selected)" class="btn btn-danger">Delete</button>
+								<button ng-click="deleteTack(tack.link)" class="btn btn-primary">Update</button>
+								</p>
 							</div>
 						</div>
 				 	</div>
