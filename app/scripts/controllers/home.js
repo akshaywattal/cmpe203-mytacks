@@ -57,10 +57,11 @@ angular.module('mytacksApp')
 	};
 
 	// Removing a Tack
-	$scope.deleteTack = function(){
-		$http.post('/api/deletetack', $scope.formData)
-		.success(function(){ 
-			alert("Removed Tack");
+	$scope.deleteTack = function(tack, selected){
+		$scope.formData.tack = tack;
+        $scope.formData.board = $scope.selected;
+		$http.post('/api/deletetack/', $scope.formData).success(function(){
+			alert('Tack Deleted');	
 			window.location.href = "/dashboard"
 		});
 	};
@@ -73,14 +74,5 @@ angular.module('mytacksApp')
 			window.location.href = "/dashboard"
 		});
 	};
-
-	/*$scope.deleteTack = function(link){
-	$scope.deleteTack = function(tack, selected){
-        debugger; 
-        //alert(link);
-        $scope.formData.tack = tack;
-        $scope.formData.board = $scope.selected;
-		$http.post('/api/deletetack/', $scope.formData).success(function(){
-			alert('Tack Deleted');
-		});
 });
+	
