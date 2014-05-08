@@ -34,6 +34,7 @@ angular.module('mytacksApp')
 			alert("Added Tack");
 			show = false;
 			//$scope.posts = $http.get('/api/posts').success(function(data){$scope.posts = data;});
+			window.location.href = "/home";
 		});
 	};
 
