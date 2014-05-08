@@ -74,5 +74,9 @@ angular.module('mytacksApp')
 			window.location.href = "/dashboard"
 		});
 	};
+
+	$scope.updateValues = function(tack){
+		$scope.formData.link = tack.link;
+	};
 });
 	

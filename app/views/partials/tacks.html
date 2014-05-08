@@ -123,13 +123,14 @@
 									{{ tack.desc }}
 								</p>
 								<br>
-								<p><button ng-click="deleteTack(tack, selected)" class="btn btn-danger">Delete</button>
-								<button ng-click="deleteTack(tack.link)" class="btn btn-primary">Update</button>
-								</p>
-
-								<div class="dropdown pull-left">
-								<a href="/dashboard/boardTacks" style="display:block; padding:1em; background:#DBDBD2; text-align:right;" data-toggle="dropdown">
-								<span class="glyphicon glyphicon-pencil"></span></a>
+								<button ng-click="deleteTack(tack, selected)" class="btn btn-danger">
+								<span class="glyphicon glyphicon-trash"></span>
+								</button>
+								<!--<button ng-click="deleteTack(tack.link)" class="btn btn-primary">Update</button>-->
+								
+								<div class="dropdown pull-right">
+								<button ng-click="updateValues(tack)" href="/dashboard/boardTacks" style="text-align:right;" data-toggle="dropdown" class="btn btn-primary">
+								<span class="glyphicon glyphicon-pencil"></span></button>
 								<ul class="dropdown-menu">
 									<div class="form-group">
 											<form class="form-horizontal" ng-submit="updateTack()">
@@ -144,9 +145,8 @@
 									</div>
 								</ul>
 								</div>
-
-
-								<div class="dropdown pull-right">
+								
+								<!--<div class="dropdown pull-right">
 								<a href="/dashboard/boardTacks" style="display:block; padding:1em; background:#DBDBD2; text-align:right;" data-toggle="dropdown">
 								<span class="glyphicon glyphicon-remove"></span></a>
 								<ul class="dropdown-menu">
@@ -160,7 +160,7 @@
 											</form>
 									</div>
 								</ul>
-								</div>
+								</div>-->
 								
 							</div>
 						</div>
