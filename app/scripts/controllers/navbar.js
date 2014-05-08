@@ -1,3 +1,5 @@
+// Name: navbar.js 
+// Description: This is used for navigation
 'use strict';
 
 angular.module('mytacksApp')

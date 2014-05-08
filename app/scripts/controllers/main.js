@@ -1,3 +1,6 @@
+// Name: main.js 
+// Description: This is used for login functionalitys
+// API: /api/awesomeThings
 'use strict';
 
 angular.module('mytacksApp')

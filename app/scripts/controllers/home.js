@@ -1,10 +1,12 @@
+// Name: home.js 
+// Description: This is main javascript for consisiting of HomeCtrl
+// API: /api/addtack, /api/addboard, /api/addboard, /api/removeboard, /api/deletetack, /api/updatetack
 'use strict';
 
 angular.module('mytacksApp')
 .controller('HomeCtrl', function($scope, User, $http, Session, $location, $rootScope){
 
 	$scope.user = $rootScope.currentUser;
-	//$scope.user = currentUser.name || '';
 
 	// $http.get('/api/users/me').success(function(user) {
  //      $scope.user = user.name;
@@ -23,6 +25,7 @@ angular.module('mytacksApp')
 	};
 
 	//$scope.link = '';	
+	// Adding a Tack
 	$scope.formData = {};
 	$scope.addTack = function(){
 		
@@ -32,10 +35,9 @@ angular.module('mytacksApp')
 			show = false;
 			//$scope.posts = $http.get('/api/posts').success(function(data){$scope.posts = data;});
 		});
-		// $scope.posts.push($scope.post);
-		// $scope.post = {url : "http://", title: ""};
 	};
 
+	// Adding a Board
 	$scope.addBoard = function(){
 		$http.post('/api/addboard', $scope.formData)
 		.success(function(){ 
@@ -45,6 +47,7 @@ angular.module('mytacksApp')
 		});
 	};
 
+	// Removing a Board
 	$scope.removeBoard = function(){
 		$http.post('/api/removeboard', $scope.formData)
 		.success(function(){ 
@@ -53,7 +56,25 @@ angular.module('mytacksApp')
 		});
 	};
 
+	// Removing a Tack
+	$scope.deleteTack = function(){
+		$http.post('/api/deletetack', $scope.formData)
+		.success(function(){ 
+			alert("Removed Tack");
+			window.location.href = "/dashboard"
+		});
+	};
 
+	// Updating a Tack
+	$scope.updateTack = function(){
+		$http.post('/api/updatetack', $scope.formData)
+		.success(function(){ 
+			alert("Updated Tack");
+			window.location.href = "/dashboard"
+		});
+	};
+
+	/*$scope.deleteTack = function(link){
 	$scope.deleteTack = function(tack, selected){
         debugger; 
         //alert(link);
@@ -62,14 +83,4 @@ angular.module('mytacksApp')
 		$http.post('/api/deletetack/', $scope.formData).success(function(){
 			alert('Tack Deleted');
 		});
-	};
-
-	// Modal
-	
-		
-
-// Please note that $modalInstance represents a modal window (instance) dependency.
-// It is not the same as the $modal service used above.
-
-
 });

@@ -18,6 +18,7 @@ exports.feed = function(req, res) {
 
 // Delete Tack
 
+<<<<<<< HEAD
 exports.deleteTack = function(req, res){
 console.log(req);
 return Tack.update({link : req.body.tack.link},
@@ -28,6 +29,10 @@ return Tack.update({link : req.body.tack.link},
 		   				}
 		   				else return 'error';
 		   			});
+=======
+/*exports.deleteTack = function(req, res){
+console.log(req.params.link);
+>>>>>>> cf4371947ce0fedcf191286cc2c36e3e85cf02ba
 // return Tack.remove(function (err, tacks) {
 //     if (!err) {
 //       return res.json(tacks);

@@ -1,3 +1,5 @@
+// Name: settings.js 
+// Description: This is used for user password update
 'use strict';
 
 angular.module('mytacksApp')

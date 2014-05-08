@@ -1,3 +1,6 @@
+// Name: feed.js 
+// Description: This is used for getting the tack feed on the Wall
+// API: /api/feed
 'use strict';
 
 angular.module('mytacksApp')

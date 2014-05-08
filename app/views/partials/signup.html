@@ -8,7 +8,7 @@
                                           'has-error': form.name.$invalid && submitted }">
       <label class="sr-only">Name</label>
 
-      <input type="text" name="name" class="form-control" placeholder="Name" ng-model="user.name"
+      <input type="text" id="inputName" name="name" class="form-control" placeholder="Name" ng-model="user.name"
                required/>
         <p class="help-block" ng-show="form.name.$error.required && submitted">
           A name is required
@@ -18,8 +18,8 @@
       <div class="form-group" ng-class="{ 'has-success': form.email.$valid && submitted,
                                           'has-error': form.email.$invalid && submitted }">
       <label class="sr-only">Email Address</label>
-      <input type="email" name="email" class="form-control" placeholder="Email Address" ng-model="user.email"
-               required
+      <input type="email" id="inputEmail1" name="email" class="form-control" placeholder="Email Address" ng-model="user.email"
+		required
                mongoose-error/>
         <p class="help-block" ng-show="form.email.$error.email && submitted">
           Doesn't look like a valid email.
@@ -57,6 +57,9 @@
       <p style="text-align:center;" > 
         Have an account? <a href="/login" class="text-center new-account">Log In</a>
       </p>
+      <div class="btn-group">
+      <button class="btn btn-lg btn-primary" style="position:relative; right:-6.8em;" onclick="hello( 'facebook' ).login()">Sign in with Facebook</button>
+      </div>
     </form>
   </div>
 </div>
