@@ -14,7 +14,7 @@
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" style="background: black;" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/dashboard">Dashboard</a></li>
 					<!--<li><a href="#">Link</a></li>
@@ -65,17 +65,17 @@
 		</div><!-- /.container-fluid -->
 
 		<!-- Left navigation bar -->
-		<div class="navbar-default navbar-static-side" role="navigation">
+		<div class="navbar-default navbar-static-side" style = "background: black;" role="navigation">
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="/dashboard"><i class="fa fa-dashboard fa-fw"></i> Boards</a>
+                            <a href="/dashboard" style="color: rgb(223, 140, 173);"><i class="fa fa-dashboard fa-fw"></i> Boards</a>
                         </li>
                         <li>
-                            <a href="/settings"><i class="fa fa-edit fa-fw"></i> Update Profile</a>
+                            <a href="/settings" style="color: rgb(223, 140, 173);"><i class="fa fa-edit fa-fw"></i> Update Profile</a>
                         </li>
                         <li ng-repeat="boards in currentUser.boards_created" ng-class="{active : isSelected(boards)}">
-                            <a href="/dashboard/boardTacks" ng-click="setMaster(boards)"><i class="fa fa-fw"></i> {{ boards }}</a>
+                            <a style="color: rgb(223, 140, 173);" href="/dashboard/boardTacks" ng-click="setMaster(boards)"><i class="fa fa-fw"></i> {{ boards }}</a>
                         </li>
                     </ul>
                     <!-- /#side-menu -->
@@ -86,10 +86,10 @@
 	</nav>
 
 	<!-- Dashboard consisting of Created and Followed Board -->
-	<div id="page-wrapper" ng-if="!selected" style="background:#DBDBD2">
+	<div id="page-wrapper" ng-if="!selected" style="background: #491A36; opacity: .7; border-radius: 10px;">
             <div class="row">	
 				<div class="dropdown pull-right">
-					<a href="/dashboard" style="display:block; padding:1em; background:#DBDBD2; text-align:right;" data-reveal-id="registerModal" data-toggle="dropdown">Add Board
+					<a href="/dashboard" style="display:block; padding:1em; background: #B60707; color:white; text-align:right;" data-reveal-id="registerModal" data-toggle="dropdown">Add Board
 					<span class="glyphicon glyphicon-plus-sign"></span></a>
 					<ul class="dropdown-menu">
 							<div class="form-group">
@@ -105,7 +105,7 @@
 				<h1 class="page-header"></h1>
 
                 <div class="col-lg-12">
-                    <h1 class="page-header"><center>My Boards</center></h1>
+                    <h1 class="page-header" style="color:white;"><center>My Boards</center></h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -113,7 +113,7 @@
 
             <div class="row center-block">
 				<div ng-repeat="boards in currentUser.boards_created ">
-            		<div class="col-md-3 portfolio-item" style="background:#fff; margin-left:4em; height:70px">
+            		<div class="col-md-3 btn btn-danger" style="background:#fff; margin-left:4em; height:70px">
                 		<!--<a href="/dashboard/boardTacks">
                     		<img class="img-responsive" src="http://placehold.it/700x400">
                 		</a>-->
@@ -128,7 +128,7 @@
             
 			<div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header"><center>Followed Boards</center></h1>
+                    <h1 class="page-header" style="color:white;"><center>Followed Boards</center></h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>

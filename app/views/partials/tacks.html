@@ -14,7 +14,7 @@
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<div class="collapse navbar-collapse" style="background: black;" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/dashboard">Dashboard</a></li>
 					<!--<li><a href="#">Link</a></li>
@@ -69,13 +69,13 @@
                 <div class="sidebar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="/dashboard"><i class="fa fa-dashboard fa-fw"></i> Boards</a>
+                            <a href="/dashboard" style="color: rgb(223, 140, 173);" ><i class="fa fa-dashboard fa-fw"></i> Boards</a>
                         </li>
                         <li>
-                            <a href="/settings"><i class="fa fa-edit fa-fw"></i> Update Profile</a>
+                            <a href="/settings" style="color: rgb(223, 140, 173);" ><i class="fa fa-edit fa-fw"></i> Update Profile</a>
                         </li>
                         <li ng-repeat="boards in currentUser.boards_created" ng-class="{active : isSelected(boards)}">
-                            <a href="/dashboard/boardTacks" ng-click="setMaster(boards)"><i class="fa fa-fw"></i> {{ boards }}</a>
+                            <a href="/dashboard/boardTacks" style="color: rgb(223, 140, 173);" ng-click="setMaster(boards)"><i class="fa fa-fw"></i> {{ boards }}</a>
                         </li>
                     </ul>
                     <!-- /#side-menu -->
