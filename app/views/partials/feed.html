@@ -8,7 +8,7 @@
 		<div id="columns">
 			<div ng-repeat="tack in feed">
 				<div class="pin">
-					<a href="{{ tack.link }}"><h3>{{ tack.title }}</h3></a>
+					<a href="{{ tack.link }}"><h3 style = "color: rgb(209, 19, 19);"><center>{{ tack.title }}</center></h3></a>
 					<img src="{{ tack.imageURL || 'http://www.designofsignage.com/application/symbol/building/image/600x600/no-photo.jpg' }}" />
 					<p>
 						{{ tack.desc}}
