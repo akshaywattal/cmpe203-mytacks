@@ -4,7 +4,7 @@
 'use strict';
 
 angular.module('mytacksApp')
-.controller('HomeCtrl', function($scope, User, $http, Session, $location, $rootScope){
+.controller('HomeCtrl', function($scope, User, $http, Session, $location, $rootScope, $route){
 
 	$scope.user = $rootScope.currentUser;
 
@@ -79,5 +79,24 @@ angular.module('mytacksApp')
 	$scope.updateValues = function(tack){
 		$scope.formData.link = tack.link;
 	};
+
+	//follow a tack on board
+	$scope.follow = function(tack){
+                $scope.formData.tack = tack;
+                $http.post('/api/follow', $scope.formData)
+                .success(function(){
+                        alert("Followed");
+                        $route.reload();
+                });
+        };
+
+	//unfollow board on tack
+	$scope.unfollow = function(tack){
+                $scope.formData.tack = tack;
+                $http.post('/api/unfollow', $scope.formData).success(function(){
+                        alert('Unfollowed');
+                        $route.reload();
+                });
+        };
 });
 	

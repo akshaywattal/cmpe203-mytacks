@@ -1,6 +1,7 @@
 <div ng-include src="'/views/partials/navbar.html'"></div>
 <div ng-include="'partials/home'" ></div>
 <div ng-controller="FeedCtrl">
+<div ng-controller="HomeCtrl">
 
 <!-- To display feed on wall-->
 <div class="container">
@@ -13,6 +14,16 @@
 					<p>
 						{{ tack.desc}}
 					</p>
+					<form class="form-horizontal" ng-submit="follow(tack)">
+                                        <p>
+                                                <label ng-hide="tack.followstatus == 'Unfollow'">Follow on</label>
+                                                <select class="form-control" ng-model="formData.board" ng-hide="tack.followstatus == 'Unfollow'" ng-options="board for board in user.boards_created"></select>
+                                                <button type="submit" class="btn btn-primary" ng-hide="tack.followstatus == 'Unfollow'">{{ tack.followstatus }}</button>
+                                        </p>
+                                        </form>
+                                        <form class="form-horizontal" ng-submit="unfollow(tack)">
+                                        <button type="submit" class="btn btn-primary" ng-hide="tack.followstatus == 'Follow'">{{ tack.followstatus }} from {{ tack.boards[0] }}</button>
+                                        </form>
 				</div>
 			</div>
 	 	</div>
